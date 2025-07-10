@@ -1,11 +1,11 @@
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt
-import json
-from AIemailRewrite.settings import OPENAI_API_KEY
 from openai import AzureOpenAI
 from .models import Style, Context, Language
 from pydantic import BaseModel
+from AIemailRewrite.settings import OPENAI_API_KEY
+import json
 
 
 def list_languages(request):
